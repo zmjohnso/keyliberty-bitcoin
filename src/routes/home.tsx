@@ -16,7 +16,7 @@ export const Home: React.FC = () => {
       <CardMedia
         component="img"
         sx={{ width: { xs: 350, md: 450 } }}
-        image="src/assets/logo_horizontal.png"
+        image="/src/assets/logo_horizontal.png"
         alt="KeyLiberty Bitcoin Logo"
       />
       <Typography variant="h4" component="h4" color="black" gutterBottom>

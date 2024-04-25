@@ -48,7 +48,7 @@ export const About: React.FC = () => {
         <CardMedia
           component="img"
           height="194"
-          image="src/assets/icon.svg"
+          image="/src/assets/icon.svg"
           alt="Paella dish"
         />
         <CardContent>

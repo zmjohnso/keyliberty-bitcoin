@@ -8,6 +8,7 @@ import {
   Menu,
   MenuItem,
   useTheme,
+  CardMedia,
 } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -40,7 +41,7 @@ export const Root: React.FC = () => {
 
   const handleGithubClick = () => {
     window.open(
-      "https://github.com/zmjohnso/",
+      "https://github.com/zmjohnso/keyliberty-bitcoin",
       "_blank",
       "noopener noreferrer"
     );
@@ -95,11 +96,12 @@ export const Root: React.FC = () => {
                 textDecoration: "none",
               }}
             >
-              <img
-                alt="KeyLiberty Bitcoin Logo"
-                src="src/assets/logo_horizontal.png"
+              <CardMedia
+                component="img"
                 height={75}
                 width={75}
+                image="/src/assets/logo_horizontal.png"
+                alt="KeyLiberty Bitcoin Logo"
                 onClick={handleHomeNavigation}
               />
             </Typography>
