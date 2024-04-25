@@ -100,7 +100,7 @@ export const Root: React.FC = () => {
                 component="img"
                 height={75}
                 width={75}
-                image="/src/assets/logo_horizontal.png"
+                image="/assets/logo_horizontal.png"
                 alt="KeyLiberty Bitcoin Logo"
                 onClick={handleHomeNavigation}
               />
