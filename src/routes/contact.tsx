@@ -10,7 +10,9 @@ export const Contact: React.FC = () => {
       <Typography variant="h4" align="center">
         Schedule a meeting with me below!
       </Typography>
-      <InlineWidget url="https://calendly.com/zachary-business/30min" />
+      <Box border="solid" margin="1rem">
+        <InlineWidget url="https://calendly.com/zachary-business/30min" />
+      </Box>
     </Box>
   );
 };

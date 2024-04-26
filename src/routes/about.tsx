@@ -40,7 +40,7 @@ export const About: React.FC = () => {
       <Typography variant="h2" align="center" gutterBottom>
         About
       </Typography>
-      <Card sx={{ maxWidth: 500 }}>
+      <Card sx={{ maxWidth: 600, margin: "1rem" }}>
         <CardHeader
           title="Zachary M Johnson"
           subheader="Software Consultant and Developer"

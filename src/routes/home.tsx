@@ -19,14 +19,20 @@ export const Home: React.FC = () => {
         image="/assets/logo_horizontal.png"
         alt="KeyLiberty Bitcoin Logo"
       />
-      <Typography variant="h4" component="h4" color="black" gutterBottom>
+      <Typography
+        align="center"
+        variant="h4"
+        component="h4"
+        color="black"
+        gutterBottom
+      >
         Learn how to safely store your Bitcoin and experince true financial
         freedom.
       </Typography>
-      <Typography variant="h6" component="h6" color="black">
+      <Typography paddingTop="2rem" align="center" variant="h6" component="h6" color="black">
         Get started by viewing the available{" "}
-        <Link to="/services">service packages</Link>{" "}
-        or <Link to="/contact">schedule a free meeting with me.</Link>
+        <Link to="/services">service packages</Link> or{" "}
+        <Link to="/contact">schedule a free meeting with me.</Link>
       </Typography>
     </Box>
   );

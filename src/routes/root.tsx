@@ -78,22 +78,24 @@ export const Root: React.FC = () => {
   );
 
   return (
-    <Box>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <AppBar position="static">
         <Container maxWidth="xl">
-          <Toolbar disableGutters>
+          <Toolbar
+            disableGutters
+            sx={{ justifyContent: { xs: "space-between", md: "center" } }}
+          >
             <Typography
               variant="h6"
               noWrap
               component="a"
               sx={{
-                mr: 2,
                 display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
               }}
             >
               <CardMedia
@@ -106,12 +108,14 @@ export const Root: React.FC = () => {
               />
             </Typography>
 
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <Box
+              sx={{
+                display: { xs: "flex", md: "none" },
+              }}
+            >
               <IconButton
                 size="large"
-                aria-label="account of current user"
                 aria-controls="menu-appbar"
-                aria-haspopup="true"
                 onClick={handleOpenNavMenu}
                 color="inherit"
               >
@@ -143,29 +147,26 @@ export const Root: React.FC = () => {
               </Menu>
             </Box>
             <Typography
-              variant="h5"
+              variant="h6"
               noWrap
               component="a"
               sx={{
-                mr: 2,
                 display: { xs: "flex", md: "none" },
-                flexGrow: 1,
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
               }}
             >
-              <img
-                alt="KeyLiberty Bitcoin Logo"
-                src="src/assets/logo_horizontal.png"
+              <CardMedia
+                component="img"
                 height={75}
                 width={75}
+                image="/assets/logo_horizontal.png"
+                alt="KeyLiberty Bitcoin Logo"
                 onClick={handleHomeNavigation}
               />
             </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            <Box
+              justifyContent="space-evenly"
+              sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
+            >
               {Array.from(pages.entries()).map((page) => (
                 <MenuItem
                   key={page[0]}
@@ -176,9 +177,6 @@ export const Root: React.FC = () => {
               ))}
             </Box>
             <Box>
-              <IconButton color="inherit" onClick={handleLinkedInClick}>
-                <LinkedInIcon />
-              </IconButton>
               <IconButton color="inherit" onClick={handleGithubClick}>
                 <GitHubIcon />
               </IconButton>
