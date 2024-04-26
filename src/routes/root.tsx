@@ -11,7 +11,6 @@ import {
   CardMedia,
 } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
@@ -42,14 +41,6 @@ export const Root: React.FC = () => {
   const handleGithubClick = () => {
     window.open(
       "https://github.com/zmjohnso/keyliberty-bitcoin",
-      "_blank",
-      "noopener noreferrer"
-    );
-  };
-
-  const handleLinkedInClick = () => {
-    window.open(
-      "https://www.linkedin.com/in/zachary-m-johnson/",
       "_blank",
       "noopener noreferrer"
     );
