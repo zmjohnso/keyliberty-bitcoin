@@ -4,6 +4,7 @@ import {
   Card,
   CardActions,
   CardContent,
+  IconButton,
   List,
   ListItem,
   ListItemIcon,
@@ -13,11 +14,12 @@ import {
   Typography,
 } from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
+import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const modalStyles = {
-  position: "absolute" as "absolute",
+  position: "absolute" as const,
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
@@ -65,9 +67,21 @@ export const Services: React.FC = () => {
             </Button>
             <Modal open={openBeginnerModal} onClose={handleCloseBeginnerModal}>
               <Box sx={modalStyles}>
-                <Typography variant="h6" component="h2">
-                  Beginner Package
-                </Typography>
+                <Stack
+                  direction="row"
+                  spacing={2}
+                  justifyContent="space-between"
+                >
+                  <Typography variant="h6" component="h2">
+                    Beginner Package
+                  </Typography>
+                  <IconButton
+                    aria-label="close beginner package modal"
+                    onClick={handleCloseBeginnerModal}
+                  >
+                    <CloseIcon />
+                  </IconButton>
+                </Stack>
                 <Typography variant="body1" component="body">
                   This package includes the following services:
                 </Typography>
@@ -128,9 +142,21 @@ export const Services: React.FC = () => {
             </Button>
             <Modal open={openAdvancedModal} onClose={handleCloseAdvancedModal}>
               <Box sx={modalStyles}>
-                <Typography variant="h6" component="h2">
-                  Advanced Package
-                </Typography>
+                <Stack
+                  direction="row"
+                  spacing={2}
+                  justifyContent="space-between"
+                >
+                  <Typography variant="h6" component="h2">
+                    Advanced Package
+                  </Typography>
+                  <IconButton
+                    aria-label="close advanced package modal"
+                    onClick={handleCloseAdvancedModal}
+                  >
+                    <CloseIcon />
+                  </IconButton>
+                </Stack>
                 <Typography variant="body1" component="body">
                   This package includes everything in the Beginner package plus
                   the following services:
