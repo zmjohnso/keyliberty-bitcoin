@@ -40,16 +40,22 @@ export const About: React.FC = () => {
       <Typography variant="h2" align="center" gutterBottom>
         About
       </Typography>
-      <Card sx={{ maxWidth: 600, margin: "1rem" }}>
+      <Card
+        sx={{
+          maxWidth: 600,
+          margin: "1rem",
+          background: "#e1f6fe",
+        }}
+      >
         <CardHeader
           title="Zachary M Johnson"
           subheader="Software Consultant and Developer"
         />
         <CardMedia
           component="img"
-          height="194"
-          image="/assets/icon.svg"
-          alt="Paella dish"
+          height="450"
+          image="/assets/profile.png"
+          alt="Zachary Johnson Profile Photo"
         />
         <CardContent>
           <Typography variant="body1" color="text.secondary" gutterBottom>

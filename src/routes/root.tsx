@@ -10,7 +10,7 @@ import {
   useTheme,
   CardMedia,
 } from "@mui/material";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import XIcon from "@mui/icons-material/X";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
@@ -38,9 +38,9 @@ export const Root: React.FC = () => {
     navigate("/");
   };
 
-  const handleGithubClick = () => {
+  const handleXClick = () => {
     window.open(
-      "https://github.com/zmjohnso/keyliberty-bitcoin",
+      "https://twitter.com/KeyLibertyBTC",
       "_blank",
       "noopener noreferrer"
     );
@@ -168,8 +168,8 @@ export const Root: React.FC = () => {
               ))}
             </Box>
             <Box>
-              <IconButton color="inherit" onClick={handleGithubClick}>
-                <GitHubIcon />
+              <IconButton color="inherit" onClick={handleXClick}>
+                <XIcon />
               </IconButton>
             </Box>
           </Toolbar>
