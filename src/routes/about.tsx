@@ -48,7 +48,7 @@ export const About: React.FC = () => {
         }}
       >
         <CardHeader
-          title="Zachary M Johnson"
+          title="Zachary M. Johnson"
           subheader="Software Consultant and Developer"
         />
         <CardMedia
@@ -75,12 +75,12 @@ export const About: React.FC = () => {
             .
           </Typography>
           <Typography variant="body1" color="text.secondary" gutterBottom>
-            In November 2019 I began my Bitcoin journey at TABConf, where my
+            In November of 2021 I began my Bitcoin journey at TABConf, where my
             hackathon team took first place working on a real-time payment
-            system for freelance developers via the Lightning Network. Ever
-            since, I have been continuing my Bitcoin education, helping others
-            learn purchase and self-custody Bitcoin, and contributing to
-            open-source projects, such as{" "}
+            system for freelance developers via the Lightning Network. I have
+            since continued my Bitcoin education, helping others learn how to
+            purchase and self-custody Bitcoin, and contributing to open-source
+            projects, such as{" "}
             <Link
               href="https://github.com/joinmarket-webui/jam"
               target="_blank"
@@ -93,10 +93,16 @@ export const About: React.FC = () => {
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
-          <IconButton aria-label="link to github" onClick={handleGithubClick}>
+          <IconButton
+            aria-label="link to personal github account"
+            onClick={handleGithubClick}
+          >
             <GitHubIcon />
           </IconButton>
-          <IconButton aria-label="LinkedIn" onClick={handleLinkedInClick}>
+          <IconButton
+            aria-label="link to personal LinkedIn"
+            onClick={handleLinkedInClick}
+          >
             <LinkedInIcon />
           </IconButton>
         </CardActions>
