@@ -17,7 +17,7 @@ export const About: React.FC = () => {
     window.open(
       "https://github.com/zmjohnso/",
       "_blank",
-      "noopener noreferrer"
+      "noopener noreferrer",
     );
   };
 
@@ -25,7 +25,7 @@ export const About: React.FC = () => {
     window.open(
       "https://www.linkedin.com/in/zachary-m-johnson/",
       "_blank",
-      "noopener noreferrer"
+      "noopener noreferrer",
     );
   };
 

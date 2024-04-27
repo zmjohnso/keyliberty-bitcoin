@@ -16,7 +16,7 @@ export const Home: React.FC = () => {
       <CardMedia
         component="img"
         sx={{ width: { xs: 350, md: 450 } }}
-        image="/assets/logo_horizontal.png"
+        image="/assets/logo.png"
         alt="KeyLiberty Bitcoin Logo"
       />
       <Typography
@@ -29,7 +29,13 @@ export const Home: React.FC = () => {
         Learn how to safely store your Bitcoin and experince true financial
         freedom.
       </Typography>
-      <Typography paddingTop="2rem" align="center" variant="h6" component="h6" color="black">
+      <Typography
+        paddingTop="2rem"
+        align="center"
+        variant="h6"
+        component="h6"
+        color="black"
+      >
         Get started by viewing the available{" "}
         <Link to="/services">service packages</Link> or{" "}
         <Link to="/contact">schedule a free meeting with me.</Link>

@@ -42,7 +42,7 @@ export const Root: React.FC = () => {
     window.open(
       "https://twitter.com/KeyLibertyBTC",
       "_blank",
-      "noopener noreferrer"
+      "noopener noreferrer",
     );
   };
 
@@ -93,7 +93,7 @@ export const Root: React.FC = () => {
                 component="img"
                 height={75}
                 width={75}
-                image="/assets/logo_horizontal.png"
+                image="/assets/logo.png"
                 alt="KeyLiberty Bitcoin Logo"
                 onClick={handleHomeNavigation}
               />
@@ -149,7 +149,7 @@ export const Root: React.FC = () => {
                 component="img"
                 height={75}
                 width={75}
-                image="/assets/logo_horizontal.png"
+                image="/assets/logo.png"
                 alt="KeyLiberty Bitcoin Logo"
                 onClick={handleHomeNavigation}
               />
