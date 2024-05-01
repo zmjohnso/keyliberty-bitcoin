@@ -38,7 +38,7 @@ export const Home: React.FC = () => {
       >
         Get started by viewing the available{" "}
         <Link to="/services">service packages</Link> or{" "}
-        <Link to="/contact">schedule a free meeting with me.</Link>
+        <Link to="/contact">scheduling a free meeting.</Link>
       </Typography>
     </Box>
   );

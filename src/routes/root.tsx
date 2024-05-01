@@ -49,13 +49,14 @@ export const Root: React.FC = () => {
   interface NavLinkItemProps {
     location: string;
     title: string;
+    color: string;
   }
 
   const NavLinkItem: React.FC<NavLinkItemProps> = (props) => (
     <NavLink
       style={({ isActive }) => {
         return {
-          color: isActive ? theme.palette.primary.contrastText : "inherit",
+          color: isActive ? props.color : "inherit",
           textDecoration: "none",
           fontFamily: "Roboto, sans-serif",
           fontWeight: 500,
@@ -132,7 +133,11 @@ export const Root: React.FC = () => {
               >
                 {Array.from(pages.entries()).map((page) => (
                   <MenuItem key={page[0]}>
-                    <NavLinkItem title={page[0]} location={page[1]} />
+                    <NavLinkItem
+                      title={page[0]}
+                      location={page[1]}
+                      color={theme.palette.primary.main}
+                    />
                   </MenuItem>
                 ))}
               </Menu>
@@ -163,7 +168,11 @@ export const Root: React.FC = () => {
                   key={page[0]}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
-                  <NavLinkItem title={page[0]} location={page[1]} />
+                  <NavLinkItem
+                    title={page[0]}
+                    location={page[1]}
+                    color={theme.palette.text.primary}
+                  />
                 </MenuItem>
               ))}
             </Box>

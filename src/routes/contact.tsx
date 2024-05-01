@@ -8,7 +8,7 @@ export const Contact: React.FC = () => {
         Contact
       </Typography>
       <Typography variant="h4" align="center">
-        Schedule a meeting with me below!
+        Schedule a free meeting with me below!
       </Typography>
       <Box border="solid" margin="1rem">
         <InlineWidget url="https://calendly.com/zachary-business/30min" />

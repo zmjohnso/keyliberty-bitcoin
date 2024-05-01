@@ -32,9 +32,9 @@ const modalStyles = {
 };
 
 export const Services: React.FC = () => {
-  const [openBeginnerModal, setOpenBeginnerModal] = useState(false);
-  const handleOpenBeginnerModal = () => setOpenBeginnerModal(true);
-  const handleCloseBeginnerModal = () => setOpenBeginnerModal(false);
+  const [openStandardModal, setOpenStandardModal] = useState(false);
+  const handleOpenStandardModal = () => setOpenStandardModal(true);
+  const handleCloseStandardModal = () => setOpenStandardModal(false);
   const [openAdvancedModal, setOpenAdvancedModal] = useState(false);
   const handleOpenAdvancedModal = () => setOpenAdvancedModal(true);
   const handleCloseAdvancedModal = () => setOpenAdvancedModal(false);
@@ -43,29 +43,37 @@ export const Services: React.FC = () => {
     <Box alignContent="center" margin={{ xs: "1rem", md: "5rem" }}>
       <Stack
         spacing={2}
-        direction={{ xs: "column", md: "row" }}
         justifyContent="center"
         alignItems="center"
+        direction={{ xs: "column", md: "row" }}
       >
-        <Card sx={{ minWidth: 275, maxWidth: 400, height: 250 }}>
+        <Card
+          sx={{
+            minWidth: 275,
+            maxWidth: 500,
+            minHeight: 300,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+          }}
+        >
           <CardContent>
             <Typography variant="h3" component="div" gutterBottom>
-              Beginner
+              Standard
             </Typography>
             <Typography
               sx={{ fontSize: 14 }}
               color="text.secondary"
               gutterBottom
             >
-              Perfect for those individuals who are less tech savy, but want to
-              learn how to safely store and own their own Bitcoin.
+              Learn the basics to securely send, recive and store Bitcoin.
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small" onClick={handleOpenBeginnerModal}>
+            <Button size="small" onClick={handleOpenStandardModal}>
               Learn More
             </Button>
-            <Modal open={openBeginnerModal} onClose={handleCloseBeginnerModal}>
+            <Modal open={openStandardModal} onClose={handleCloseStandardModal}>
               <Box sx={modalStyles}>
                 <Stack
                   direction="row"
@@ -73,11 +81,11 @@ export const Services: React.FC = () => {
                   justifyContent="space-between"
                 >
                   <Typography variant="h6" component="h2">
-                    Beginner Package
+                    Standard Package
                   </Typography>
                   <IconButton
-                    aria-label="close beginner package modal"
-                    onClick={handleCloseBeginnerModal}
+                    aria-label="close Standard package modal"
+                    onClick={handleCloseStandardModal}
                   >
                     <CloseIcon />
                   </IconButton>
@@ -91,37 +99,43 @@ export const Services: React.FC = () => {
                       <ListItemIcon>
                         <CheckIcon />
                       </ListItemIcon>
-                      <ListItemText
-                        primary="Getting setup with a Bitcoin cold storage hardware wallet."
-                        secondary="As well as how to safely store your seedphrase!"
-                      ></ListItemText>
+                      <ListItemText primary="Guidance purchasing your first hardware wallet."></ListItemText>
                     </ListItem>
                     <ListItem>
                       <ListItemIcon>
                         <CheckIcon />
                       </ListItemIcon>
-                      <ListItemText primary="How to buy Bitcoin."></ListItemText>
+                      <ListItemText primary="How to safely store your seedphrase."></ListItemText>
                     </ListItem>
                     <ListItem>
                       <ListItemIcon>
                         <CheckIcon />
                       </ListItemIcon>
-                      <ListItemText primary="How to send Bitcoin to your hardware wallet after purchasing it."></ListItemText>
+                      <ListItemText primary="Learn how to buy Bitcoin."></ListItemText>
                     </ListItem>
                     <ListItem>
                       <ListItemIcon>
                         <CheckIcon />
                       </ListItemIcon>
-                      <ListItemText primary="Lifetime call support for any questions you may have about your Bitcoin storage!"></ListItemText>
+                      <ListItemText primary="Learn how to send and recieve Bitcoin with your new cold storage hardware wallet."></ListItemText>
                     </ListItem>
                   </List>
-                  <Link to="/contact">Schedule a call.</Link>
+                  <Link to="/contact">Schedule a free call.</Link>
                 </Typography>
               </Box>
             </Modal>
           </CardActions>
         </Card>
-        <Card sx={{ minWidth: 275, maxWidth: 400, height: 250 }}>
+        <Card
+          sx={{
+            minWidth: 275,
+            maxWidth: 500,
+            minHeight: 300,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+          }}
+        >
           <CardContent>
             <Typography variant="h3" component="div" gutterBottom>
               Advanced
@@ -131,9 +145,9 @@ export const Services: React.FC = () => {
               color="text.secondary"
               gutterBottom
             >
-              Great for those who already understand the basics of Bitcoin but
-              want to learn about more advanced custody models and security, and
-              how to contribute to the Bitcoin network through running a node.
+              Learn more robust methods to store your bitcoin as well as how to
+              increase your own privacy and support the continued functioning of
+              the Bitcoin network.
             </Typography>
           </CardContent>
           <CardActions>
@@ -158,7 +172,7 @@ export const Services: React.FC = () => {
                   </IconButton>
                 </Stack>
                 <Typography variant="body1" component="body">
-                  This package includes everything in the Beginner package plus
+                  This package includes everything in the Standard package plus
                   the following services:
                 </Typography>
                 <Typography sx={{ mt: 2 }}>
@@ -167,25 +181,28 @@ export const Services: React.FC = () => {
                       <ListItemIcon>
                         <CheckIcon />
                       </ListItemIcon>
-                      <ListItemText primary="Advanced Bitcoin wallet hardware setup and backup methods."></ListItemText>
+                      <ListItemText primary="Advanced hardware wallet options consulting."></ListItemText>
                     </ListItem>
                     <ListItem>
                       <ListItemIcon>
                         <CheckIcon />
                       </ListItemIcon>
                       <ListItemText
-                        primary="How to run your own Bitcoin node."
-                        secondary="And how to connect that node to your hardware wallet software."
+                        primary="Advanced seedprhase storage setup."
+                        secondary="Seed XOR and Shamir backup options."
                       ></ListItemText>
                     </ListItem>
                     <ListItem>
                       <ListItemIcon>
                         <CheckIcon />
                       </ListItemIcon>
-                      <ListItemText primary="Lifetime call support for any questions you may have about your Bitcoin storage!"></ListItemText>
+                      <ListItemText
+                        primary="How to run your own node and connect it to your hardware wallet software."
+                        secondary="Contribute to the security of the Bitcoin network while increasing your privacy."
+                      ></ListItemText>
                     </ListItem>
                   </List>
-                  <Link to="/contact">Schedule a call.</Link>
+                  <Link to="/contact">Schedule a free call.</Link>
                 </Typography>
               </Box>
             </Modal>
