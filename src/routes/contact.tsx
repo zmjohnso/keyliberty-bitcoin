@@ -11,7 +11,7 @@ export const Contact: React.FC = () => {
         Schedule a free meeting with me below!
       </Typography>
       <Box border="solid" margin="1rem">
-        <InlineWidget url="https://calendly.com/zachary-business/30min" />
+        <InlineWidget url="https://calendly.com/keylibertybitcoin/30min" />
       </Box>
     </Box>
   );
