@@ -80,16 +80,7 @@ export const About: React.FC = () => {
             system for freelance developers via the Lightning Network. I have
             since continued my Bitcoin education, helping others learn how to
             purchase and self-custody Bitcoin, and contributing to open-source
-            projects, such as{" "}
-            <Link
-              href="https://github.com/joinmarket-webui/jam"
-              target="_blank"
-              rel="noreferrer"
-              underline="always"
-            >
-              Jam
-            </Link>
-            .
+            projects.
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
